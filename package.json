@@ -1,0 +1,43 @@
+{
+  "name": "react-test-cypress",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "start-server-and-test start http://localhost:3000 cypress",
+    "cypress": "cypress open",
+    "cy": "cypress run --browser chrome --headed --spec 'cypress/e2e/App.e2e.cy.js'",
+    "clear": "rm -rf ./cypress/screenshots ./cypress/videos ./node_modules"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:cypress/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.3",
+    "cypress": "^13.6.2",
+    "eslint-plugin-cypress": "^2.15.1",
+    "start-server-and-test": "^2.0.3"
+  }
+}
