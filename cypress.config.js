@@ -4,7 +4,6 @@ module.exports = defineConfig({
   e2e: {
     supportFile: false,
     video: true,
-    videoCompression: 32,
-    videoUploadOnPasses: true
+    videoCompression: 32
   }
 });

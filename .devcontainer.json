@@ -1,0 +1,28 @@
+{
+	"name": "Docker for cypress_tests",
+	"image": "cypress_tests",
+	"runArgs": [
+		"--init",
+		"--privileged"
+	],
+	"overrideCommand": true,
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/cypress_tests/app,type=bind,consistency=delegated",
+	"workspaceFolder": "/home/cypress_tests/app",
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.cwd": "/home/cypress_tests/app"			
+			},
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+
+	"postCreateCommand": "yarn install --frozen-lockfile",
+	
+	"remoteUser": "cypress_tests"
+}

@@ -12,8 +12,8 @@
     "build": "react-scripts build",
     "test": "start-server-and-test start http://localhost:3000 cypress",
     "cypress": "cypress open",
-    "cy": "cypress run --browser chrome --headed --spec 'cypress/e2e/App.e2e.cy.js'",
-    "clear": "rm -rf ./cypress/screenshots ./cypress/videos ./node_modules"
+    "cy": "cypress run --browser electron --headed --spec 'cypress/e2e/App.e2e.cy.js'",
+    "clear": "rm -rf ./cypress/screenshots ./cypress/videos ./node_modules ./build"
   },
   "eslintConfig": {
     "extends": [
